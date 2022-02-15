@@ -1,0 +1,2 @@
+The name is Tryndamere and hp is 625.64 of the champion with the highest hp
+The name is Orianna and armor is 17.04 of the champion with with the lowest armor
