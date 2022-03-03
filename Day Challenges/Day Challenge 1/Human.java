@@ -1,189 +1,179 @@
 /**
 Name: Christopher Park and Grace Sui
 Date: February 25, 2022
-Description: Human class file, this file will create a human (class)
+Description: Human class file
 */
 
 public class Human {
 
-    //used to find the name of human
+    /**
+    Name of the human    
+    */
     private String name;
 
-    //used to find the weight of human
+    /**
+    weight of the human    
+    */
     private double weight;
 
-    //used to find the energy level of human
+    /**
+    energyLevel of the human    
+    */
     private int energyLevel;
 
-    //used to find the gender of human
+    /**
+    gender of the human    
+    */
     private String gender;
 
-    //used to find the height of human
+    /**
+    height of the human    
+    */
     private double height;
     
-    /*
-    Constructor of Human    
+    /**
+    Constructing a human Sets name, weight, energyLevel, gender and height from parameters    
     */
     public Human(String name, double weight, int energyLevel, String gender, double height){
       
-      //initializing the attributes
-      this.name = name; 
-      this.weight = weight;
-      //energyLevel from 0 - 100
-      if (energyLevel > 100){
-         this.energyLevel = 100;
-      } else if (energyLevel < 0){
-         this.energyLevel = 0;
-      } else {
-         this.energyLevel = energyLevel;
-      }
-      this.gender = gender;
-      this.height = height;
-      
+        //initializing the attributes
+        this.name = name; 
+        this.weight = weight;
+        //energyLevel from 0 - 100, if energyLevel > 100, set to 100; if energyLevel < 0 set to 0
+        if (energyLevel > 100){
+            this.energyLevel = 100;
+        } else if (energyLevel < 0){
+            this.energyLevel = 0;
+        } else {
+            this.energyLevel = energyLevel;
+        }
+        this.gender = gender;
+        this.height = height;      
     }
 
     /**
     Gets the name of human
-    @return the name of human
+    @return String, the name of human
     */
-  
     public String getName(){
-      return this.name;
+        return this.name;
     }
 
     /**
     Gets the weight of humam
-    @return the weight of human
-    */
-  
+    @return double, the weight of human
+    */  
     public double getWeight(){
-      return this.weight;
+        return this.weight;
     }
 
     /**
     Gets the energy level of human
-    @return the energy level of human
-    */
-  
+    @return int, the energy level of human
+    */  
     public int getEnergyLevel(){
-      return this.energyLevel;
+        return this.energyLevel;
     }
 
     /**
     Gets the gender of human
-    @return the gender of human
-    */
-  
+    @return String, the gender of human
+    */  
     public String getGender(){
-      return this.gender;
+        return this.gender;
     }
 
     /**
     Gets the height of human
-    @return the height of human
-    */
-  
+    @return double, the height of human
+    */  
     public double getHeight(){
-      return this.height;
+        return this.height;
     }
 
     /**
     Description:Raises energyLevel by hours * 10%
-    @param int hours
-    @return void
-    */
-  
+    @param int, hours to sleep
+    */  
     public void sleep(int hours){
-      if (energyLevel + (10*hours) > 100){
-        energyLevel = 100;
-      } else {
-        energyLevel += (10*hours);
-      }
+        //Raises energyLevel by hours * 10%. if the raised energyLevel > 100, set to 100. if the raised energyLevel < 0, set to 0 
+        if (energyLevel + (10*hours) > 100){
+            energyLevel = 100;
+        } else {
+            energyLevel += (10*hours);
+        }
     }
 
     /**
     Description: Loses energy decreases energyLevel by 8 per km, decreases weight by 0.001 per km
-    @param double km
-    @return void
-    */
-  
+    @param double, km to run
+    */  
     public void run(double km){
-      if ((energyLevel - (8*km) < 0)){
-        energyLevel = 0;
-      } else {
-        energyLevel -= (8*km);        
-      }
-      
-      if (weight - (0.001*km) < 0){
-        weight = 0;
-      } else {
-         weight -= (0.001*km);
-      }
+        //decreases energyLevel by 8% per km. set energyLevel = 0, if energyLevel - 8*km < 0
+        if ((energyLevel - (8*km) < 0)){
+            energyLevel = 0;
+        } else {
+            energyLevel -= (8*km);        
+        }
+        //decreases weight by 0.001 per km, set weight = 0, if weight - 0.001*km < 0
+        if (weight - (0.001*km) < 0){
+            weight = 0;
+        } else {
+            weight -= (0.001*km);
+        }
     }
 
     /**
-    Returns all the attributes of the human in a String
-    */
-  
+    @return String, all the attributes of the human in a String
+    */  
     public String toString(){
-      return "Name: " + name + ", Weight: " + weight + "kg, EnergyLevel: " + energyLevel + "%,  Gender: " + gender + ", Height: " + height + "m";
+        return "Name: " + name + ", Weight: " + weight + "kg, EnergyLevel: " + energyLevel + "%,  Gender: " + gender + ", Height: " + height + "m";
     }
 
     /**
     Description: Sets new name of human
-    @param String newName
-    @return void
-    */
-  
+    @param String newName, new Name of human
+    */  
     public void setName(String newName){
-      this.name = newName;      
+        this.name = newName;      
     }
 
     /**
     Description: Sets new weight of human
-    @param double newWeight
-    @return void
-    */
-  
+    @param double newWeight, new Weight of human
+    */  
     public void setWeight(double newWeight){
-      this.weight = newWeight;
+        this.weight = newWeight;
     }
 
     /**
     Description: Sets human energy level and ensures that it does not exceed 100 or go below 0
-    @param int newEnergyLevel
-    @return void
-    */
-  
+    @param int newEnergyLevel, new Energy Level  of human
+    */  
     public void setEnergyLevel(int newEnergyLevel){
-      //energyLevel from 0 - 100
-      if (newEnergyLevel > 100){
-         this.energyLevel = 100;
-      } else if (newEnergyLevel < 0){
-         this.energyLevel = 0;
-      } else {
-         this.energyLevel = newEnergyLevel;
-      }
-
+        //energyLevel from 0 - 100, if the new energyLevel > 100, set to 100. if the new energyLevel < 0, set to 0 
+        if (newEnergyLevel > 100){
+            this.energyLevel = 100;
+        } else if (newEnergyLevel < 0){
+            this.energyLevel = 0;
+        } else {
+            this.energyLevel = newEnergyLevel;
+        }
     }
 
     /**
     Description: Sets new gender of human
-    @param String newGender
-    @return void
-    */
-  
+    @param String newGender, new gender of human
+    */  
     public void setGender(String newGender){
-      this.gender = newGender;
+        this.gender = newGender;
     }
 
     /**
     Description: Sets new height of human
-    @param double newHeight
-    @return void
-    */
-  
+    @param double newHeight, new height of human
+    */  
     public void setHeight(double newHeight){
-      this.height = newHeight;
+        this.height = newHeight;
     }
 }
