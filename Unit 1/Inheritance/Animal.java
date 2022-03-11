@@ -6,41 +6,24 @@ Description: Animal class
 
 public class Animal {
 
-   /** 
-   name of animal
-   */
-   protected String name;
+   /** name of animal */
+   private String name;
 
-   /**
-   weight of animal in kg 
-   */
-   protected double weight;
+   /** weight of animal in kg */
+   private double weight;
 
-   /**
-   habitat of animal
-   */
-   protected String habitat;
+   /** habitat of animal */
+   private String habitat;
 
-   /** 
-   if animal endangered or not
-   */
-   protected boolean endangered;
+   /** if animal endangered or not*/
+   private boolean endangered;
 
-   /** 
-   if animal alive or not
-   */
-   protected boolean alive;
+   /** if animal alive or not*/
+   private boolean alive;
   
-   /** 
-   diet of animal 
-   */
-   protected String diet;
+   /** diet of animal */
+   private String diet;
    
-   /**
-   if animal already eat food or not
-   */
-   protected boolean eaten;
-  
    /**
    * Default Constructor an animal: Sets name to "", weight to -1, habitat to "", endangered to false, alive to false and diet to ""   
    */
@@ -51,7 +34,6 @@ public class Animal {
       this.endangered = false;
       this.alive = false;
       this.diet = "";
-      this.eaten = false;
    }
   
    /**
@@ -64,41 +46,35 @@ public class Animal {
       this.endangered = endangered;
       this.alive = alive;
       this.diet = diet;
-      this.eaten = false;
    }
    
    /**
-   * Description: animal eats food, 90% increase the weight, 10% is lost.
-   * @param double grams, the amount of food
-   * @return double, the lost of food in gram  
+   * Description: animal eats something and gains the same weight that was eaten.
+   * @param double grams, the weight in grams of what is being eaten
+   * @return double, weight of the animal in kg.   
    */
    public double eat(double grams) {
-      this.weight += 0.9*grams/1000;
-      return 0.1*grams/1000;
+      this.weight += grams/1000; //increase the weight by the weight of food, convert grams to kg.
+      return this.weight;
    }
   
    /**
-   * Description: return if animal got eaten.
-   * @return boolean, animal got eaten or not 
-   */
+   * Description: animal gets eaten, affecting whether or not it's alive
+   * @return false once it is eaten, its dead
+   */  
    public boolean eaten() {
-      return this.eaten;
+      this.alive = false;
+      return this.alive;
    }
-   
+      
    /**
-   * Description: set animal if eaten or not.
-   * @param boolean eaten, set whether animal has already been eaten already.
-   */
-   public void setEaten(boolean eaten) {
-      this.eaten = eaten;
-   }
-  
-   /**
-   * Description: let animal move 1 meter.
-   * @return double, let animal move 1 meter 
-   */
-   public double move() {
-      return 1.0;
+   * Description: decreses the weight of the animal based on how far it travels. per km it travels it looses a kg
+   * @param double km -- a double of how far it travels
+   * @return double, the new weight of animal in kg
+   */ 
+   public double move(double km) {
+      this.weight = this.weight - km;//decreses the weight 1 kg by 1km
+      return this.weight;
    }
 
    /**
@@ -151,7 +127,7 @@ public class Animal {
 
    /**
    * Description: get endangered of animal.
-   * @return boolean, the endangered of animal 
+   * @return boolean, the endangered of animal, true or false 
    */
    public boolean isEndangered() {
       return endangered;
@@ -159,7 +135,7 @@ public class Animal {
 
    /**
    * Description: set animal endangered.
-   * @param boolean endangered, the endangered of animal 
+   * @param boolean endangered, the endangered of animal, true or false 
    */
    public void setEndangered(boolean endangered) {
       this.endangered = endangered;
@@ -167,7 +143,7 @@ public class Animal {
 
    /**
    * Description: get alive of animal.
-   * @return boolean, the alive of animal 
+   * @return boolean, the alive of animal, true or false 
    */
    public boolean isAlive() {
       return alive;
@@ -175,7 +151,7 @@ public class Animal {
 
    /**
    * Description: set animal alive or not.
-   * @param boolean alive, the alive of animal 
+   * @param boolean alive, the alive of animal, true or false 
    */ 
    public void setAlive(boolean alive) {
       this.alive = alive;
@@ -183,7 +159,7 @@ public class Animal {
 
    /**
    * Description: get animal diet.
-   * @param String, the diet of animal 
+   * @return String, the diet of animal 
    */ 
    public String getDiet() {
       return diet;
@@ -196,4 +172,12 @@ public class Animal {
    public void setDiet(String diet) {
       this.diet = diet;
    }
+   
+   /** 
+   * Description: prints all the attributes of the animal 
+   */
+   public String toString() {
+      return "Name: " + this.name + "; weight: " + this.weight + "; habitat: " + this.habitat + "; endangered: " + this.endangered + "; alive: " + this.alive + "; diet: " + this.diet;
+   }
+
 }
