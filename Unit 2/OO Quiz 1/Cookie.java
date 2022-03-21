@@ -38,7 +38,9 @@ public class Cookie {
   
    /**
    Description: Constructing a cookie
-   @param String name, double weight, int calories
+   @param String name
+   @param double weight
+   @param int calories
    */
    public Cookie(String name, double weight, int calories) {
       this.name = name;
@@ -49,7 +51,10 @@ public class Cookie {
    
    /**
    Description: Constructing a cookie
-   @param String name, double weight, int calories, boolean isPackaged
+   @param String name
+   @param double weight
+   @param int calories
+   @param boolean isPackaged
    */
    public Cookie(String name, double weight, int calories, boolean isPackaged) {
       this.name = name;
