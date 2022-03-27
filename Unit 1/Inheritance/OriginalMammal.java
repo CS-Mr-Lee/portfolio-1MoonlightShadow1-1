@@ -55,6 +55,16 @@ public class OriginalMammal {
 	 
    /**
    * Constructor a OriginalMammal: Sets name, weight, habitat, endangered, alive, diet, genus, numOffspring, fur and domesticated from parameters   
+   * @param String name, the name of OriginalMammal
+   * @param double weight, the weight of OriginalMammal
+   * @param String habitat, the habitat of OriginalMammal
+   * @param boolean endangered, the endangered of OriginalMammal
+   * @param boolean alive, the alive of OriginalMammal
+   * @param String diet, the diet of OriginalMammal
+   * @param String genus, the genus of OriginalMammal
+   * @param int numOffspring, the numOffspring of OriginalMammal
+   * @param boolean fur, the fur of OriginalMammal
+   * @param boolean domesticated, the domesticated of Mammal
    */
    public OriginalMammal(String name, double weight, String habitat, boolean endangered,  boolean alive, String diet, String genus, int numOffspring, boolean fur, boolean domesticated){
       this.name = name;

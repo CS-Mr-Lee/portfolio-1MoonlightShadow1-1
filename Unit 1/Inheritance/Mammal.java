@@ -32,6 +32,16 @@ public class Mammal extends Animal {
 	 
     /**
     * Constructor a mammal: Sets name, weight, habitat, endangered, alive, diet, genus, numOffspring, fur and domesticated from parameters   
+    * @param String name, the name of Mammal
+    * @param double weight, the weight of Mammal
+    * @param String habitat, the habitat of Mammal
+    * @param boolean endangered, the endangered of Mammal
+    * @param boolean alive, the alive of Mammal
+    * @param String diet, the diet of Mammal
+    * @param String genus, the genus of Mammal
+    * @param int numOffspring, the numOffspring of Mammal
+    * @param boolean fur, the fur of Mammal
+    * @param boolean domesticated, the domesticated of Mammal
     */
     public Mammal(String name, double weight, String habitat, boolean endangered,  boolean alive, String diet, String genus, int numOffspring, boolean fur, boolean domesticated){
         super(name, weight, habitat, endangered, alive, diet);

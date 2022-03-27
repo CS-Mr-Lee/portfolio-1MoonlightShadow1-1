@@ -59,6 +59,17 @@ public class OriginalAmphibians {
 	 
    /**
    * Constructor an amphibians: Sets name, weight, habitat, endangered, alive, diet, genus, species, numOfEggs, wild and family from parameters   
+   * @param String name, the name of OriginalAmphibians
+   * @param double weight, the weight of OriginalAmphibians
+   * @param String habitat, the habitat of OriginalAmphibians
+   * @param boolean endangered, the endangered of OriginalAmphibians
+   * @param boolean alive, the alive of OriginalAmphibians
+   * @param String diet, the diet of OriginalAmphibians
+   * @param String genus, the genus of OriginalAmphibians
+   * @param String species, the species of OriginalAmphibians
+   * @param int numOfEggs, the numOfEggs of OriginalAmphibians
+   * @param boolean wild, the wild of OriginalAmphibians
+   * @param String family, the family of OriginalAmphibians  
    */
    public OriginalAmphibians(String name, double weight, String habitat, boolean endangered,  boolean alive, String diet, String genus, String species, int numOfEggs, boolean wild, String family) {
       this.name = name;

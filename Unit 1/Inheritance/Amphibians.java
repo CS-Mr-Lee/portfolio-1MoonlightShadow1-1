@@ -36,6 +36,17 @@ public class Amphibians extends Animal {
 	 
     /**
     * Constructor an amphibians: Sets name, weight, habitat, endangered, alive, diet, genus, species, numOfEggs, wild and family from parameters   
+    * @param String name, the name of Amphibians
+    * @param double weight, the weight of Amphibians
+    * @param String habitat, the habitat of Amphibians
+    * @param boolean endangered, the endangered of Amphibians
+    * @param boolean alive, the alive of Amphibians
+    * @param String diet, the diet of Amphibians
+    * @param String genus, the genus of Amphibians
+    * @param String species, the species of Amphibians
+    * @param int numOfEggs, the numOfEggs of Amphibians
+    * @param boolean wild, the wild of Amphibians
+    * @param String family, the family of Amphibians
     */
     public Amphibians(String name, double weight, String habitat, boolean endangered,  boolean alive, String diet, String genus, String species, int numOfEggs, boolean wild, String family) {
         super(name, weight, habitat, endangered, alive, diet);

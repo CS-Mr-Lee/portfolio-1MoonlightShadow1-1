@@ -37,7 +37,13 @@ public class Animal {
    }
   
    /**
-   * Constructor an animal: Sets name, weight, habitat, endangered, alive and diet from parameters   
+   * Constructor an animal: Sets name, weight, habitat, endangered, alive and diet from parameters
+   * @param String name, the name of Animal
+   * @param double weight, the weight of Animal
+   * @param String habitat, the habitat of Animal
+   * @param boolean endangered, the endangered of Animal
+   * @param boolean alive, the alive of Animal
+   * @param String diet, the diet of Animal   
    */
    public Animal(String name, double weight, String habitat, boolean endangered,  boolean alive, String diet) {
       this.name = name;
