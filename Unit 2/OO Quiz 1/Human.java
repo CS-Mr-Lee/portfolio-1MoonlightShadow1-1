@@ -32,7 +32,10 @@ public class Human {
    }
     
    /**
-   Constructor of Human    
+   Constructor of Human
+   @param String name, Name of the Human
+   @param double weight, Weight of the Human in kg
+   @param int energyLevel, energyLevel of the Human
    */
    public Human(String name, double weight, int energyLevel){
       //initializing the attributes
@@ -82,12 +85,14 @@ public class Human {
    @param double km --> kms of running
    */
    public void run(double km){
+      //decreases energyLevel 1km = 3%
       if (energyLevel - 3*km < 0){
          energyLevel = 0;
       } else {
          energyLevel -= 3*km;        
       }
       
+      //decreases weight by 0.001 per km
       if (weight - 0.001*km < 0){
          weight = 0;
       } else {
@@ -96,42 +101,46 @@ public class Human {
    }
 
    /**
-   Description: 
-   @param Vegetable veg --> the eaten vegetable, double grams --> grams of vegetable that will be eaten
+   Description: Human eats a vegetable, Person gains the weight eaten,Energy level is increased by the calories (15 cal = 1%)
+   @param Vegetable veg --> the eaten vegetable.
+   @param double grams --> grams of vegetable that will be eaten in gram
    */
    public void eat(Vegetable veg, double grams){
-      int calories = veg.eaten(grams);
-      if (calories == -1) {
+      int calories = veg.eaten(grams); 
+      if (calories == -1) {  // calories will be -1 if the eat grams > veg.weight
          System.out.println("I don't have that much food");
       } else {
+         //Energy level is increased by the calories (15 cal = 1%)
          if (energyLevel + calories/15 > 100){
             energyLevel = 100;
          } else {
             energyLevel += calories/15;
          }
           
-         weight += grams/1000;
+         weight += grams/1000;  //Person gains the weight eaten in kg
       }
    }
    
    /**
-   Description: 
-   @param Cookie food --> the eaten cookie, double grams --> grams of cookie that will be eaten
+   Description: Human eats a Cookie, Person gains the weight eaten, Energy level is increased by the calories (15 cal = 1%)
+   @param Cookie food --> the eaten cookie.
+   @param double grams --> grams of cookie that will be eaten
    */
    public void eat(Cookie food, double grams){
       int calories = food.eaten(grams);
-      if (calories == -1) {
+      if (calories == -1) { //calories will be -1 if the eat grams > food.weight
          System.out.println("I don't have that much food");
-      } else if (calories == -2) {
+      } else if (calories == -2) {  //calories will be -2 if the food is packaged.
          System.out.println("I can't eat the bag");
       } else {
+         //Energy level is increased by the calories (15 cal = 1%)
          if (energyLevel + calories/15 > 100){
             energyLevel = 100;
          } else {
             energyLevel += calories/15;
          }
           
-         weight += grams/1000;
+         weight += grams/1000; //Person gains the weight eaten in kg
       }
    }
     

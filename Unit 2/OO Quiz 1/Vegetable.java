@@ -22,7 +22,7 @@ public class Vegetable {
    private int calories;
    
    /**
-   Description: Default constructor --> Sets name to “”, weight to -1, calories to -1
+   Description: Default constructor --> Sets name to "", weight to -1, calories to -1
    */
    public Vegetable() {
       this.name = "";
@@ -32,7 +32,9 @@ public class Vegetable {
    
    /**
    Description: Constructing a vegetable
-   @param String name --> name of vegetable, double weight --> weight of vegetable, int calories --> number of calories
+   @param String name --> name of vegetable
+   @param double weight --> weight of vegetable
+   @param int calories --> number calories of vegetable
    */
    public Vegetable(String name, double weight, int calories) {
       this.name = name;
@@ -70,9 +72,10 @@ public class Vegetable {
    @return removeCalories --> the amount of calories it gives
    */
    public int eaten(double weight) {
-      if (weight > this.weight) {
+      if (weight > this.weight) {  //if eaten weight > the Vegetable current weight, will return -1;
          return -1;
       } else {
+         //The calories removed is calculated as a percentage of the weight removed.
          int removeCalories = (int) (calories*(weight/this.weight));
          this.weight -= weight;
          this.calories -= removeCalories;

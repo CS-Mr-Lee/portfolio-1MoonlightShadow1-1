@@ -38,9 +38,9 @@ public class Cookie {
   
    /**
    Description: Constructing a cookie
-   @param String name
-   @param double weight
-   @param int calories
+   @param String name, Name of the cookie
+   @param double weight, Weight of the cookie in grams
+   @param int calories, Number calories of the cookie
    */
    public Cookie(String name, double weight, int calories) {
       this.name = name;
@@ -51,10 +51,10 @@ public class Cookie {
    
    /**
    Description: Constructing a cookie
-   @param String name
-   @param double weight
-   @param int calories
-   @param boolean isPackaged
+   @param String name, Name of the cookie
+   @param double weight, Weight of the cookie in grams
+   @param int calories, Number calories of the cookie
+   @param boolean isPackaged, packaged of the cookie
    */
    public Cookie(String name, double weight, int calories, boolean isPackaged) {
       this.name = name;
@@ -105,18 +105,18 @@ public class Cookie {
    /**
    Description: Cookie gets eaten, if it is not packaged. The amount of cookie removed is taken as a parameter. The calories removed is calculated as a percentage of the weight removed
    @param double weight --> weight that is eaten
-   @return removeCalories --> the amount of calories it gives
+   @return removeCalories --> the amount of calories it gives, if eaten weight > the cookie current weight, will return -1; if the current cookie is packaged will retrun -2;
    */
    public int eaten(double weight){
       if (weight > this.weight) {
-         return -1;
+         return -1;   //if eaten weight > the cookie current weight, will return -1;
       } else if (isPackaged) {
-         return -2;
+         return -2;   //if the current cookie is packaged, will retrun -2
       } else {
          int removeCalories = (int) (calories*(weight/this.weight));
          this.weight -= weight;
          this.calories -= removeCalories;
-         return removeCalories;
+         return removeCalories;  //return the calories that is removed, it is calculated as a percentage of the weight removed
       }
    }
     
