@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="parentPane" prefHeight="917.0" prefWidth="1412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.culminating.ui.UserParentMainController">
+   <left>
+      <VBox fx:id="parentLeftVbox" alignment="TOP_CENTER" prefHeight="738.0" prefWidth="183.0" spacing="2.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnMedia" mnemonicParsing="false" onAction="#showMedia" prefHeight="45.0" prefWidth="142.0" text="Media">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="btnCheckOut" mnemonicParsing="false" onAction="#checkOut" prefHeight="45.0" prefWidth="145.0" text="Check outs">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="btnHold" mnemonicParsing="false" onAction="#hold" prefHeight="45.0" prefWidth="143.0" text="Holds">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSwithUser" mnemonicParsing="false" onAction="#swithUser" prefHeight="45.0" prefWidth="143.0" text="Re-Login">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <GridPane fx:id="logoPane" prefHeight="72.0" prefWidth="829.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="userName" alignment="CENTER" prefHeight="58.0" prefWidth="188.0" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <ImageView fx:id="logo" fitHeight="74.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="294.0" minWidth="15.0" prefWidth="187.0" />
+            <ColumnConstraints maxWidth="700.0" minWidth="618.0" prefWidth="618.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </top>
+   <center>
+      <ImageView fx:id="mainPageImg" fitHeight="708.0" fitWidth="1022.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

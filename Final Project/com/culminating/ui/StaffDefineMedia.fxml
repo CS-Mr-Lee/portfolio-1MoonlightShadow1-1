@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.culminating.ui.*?>
+
+<AnchorPane prefHeight="946.0" prefWidth="1409.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.culminating.ui.StaffDefineMediaController">
+	<children>
+		<HBox id="HBox3" alignment="CENTER" layoutX="10.0" layoutY="25.0"
+			prefHeight="400.0" prefWidth="988.0" spacing="5.0"
+			AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+			AnchorPane.topAnchor="480.0">
+			<children>
+				<BorderPane layoutY="480.0" prefHeight="301.0" prefWidth="1008.0"
+					HBox.hgrow="ALWAYS">
+					<bottom>
+						<GridPane prefHeight="143.0" prefWidth="1278.0"
+							BorderPane.alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+							<columnConstraints>
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="954.0"
+									minWidth="10.0" prefWidth="206.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="954.0"
+									minWidth="10.0" prefWidth="337.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="954.0"
+									minWidth="10.0" prefWidth="217.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="969.0"
+									minWidth="10.0" prefWidth="123.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="954.0"
+									minWidth="10.0" prefWidth="83.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="651.0"
+									minWidth="10.0" prefWidth="148.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="475.0"
+									minWidth="10.0" prefWidth="150.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="247.0"
+									minWidth="10.0" prefWidth="130.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="188.0" minHeight="10.0"
+									prefHeight="125.0" vgrow="ALWAYS" />
+								<RowConstraints maxHeight="188.0" minHeight="10.0"
+									prefHeight="125.0" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<Button fx:id="addUserBtn" alignment="CENTER"
+									mnemonicParsing="false" onAction="#addMedia" prefHeight="44.0"
+									prefWidth="97.0" text="Add" GridPane.columnIndex="5"
+									GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Button>
+								<Button fx:id="deleteUserBtn" mnemonicParsing="false"
+									onAction="#deleteMedia" prefHeight="44.0" prefWidth="97.0"
+									text="Delete" GridPane.columnIndex="6">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Button>
+								<Button fx:id="doneUserBtn" mnemonicParsing="false"
+									onAction="#updateMedia" prefHeight="44.0" prefWidth="97.0"
+									text="Update" GridPane.columnIndex="7">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Button>
+								<HBox prefHeight="100.0" prefWidth="200.0"
+									GridPane.columnIndex="4" />
+							</children>
+						</GridPane>
+					</bottom>
+					<center>
+						<GridPane prefHeight="278.0" prefWidth="988.0"
+							BorderPane.alignment="CENTER">
+							<columnConstraints>
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="163.0"
+									minWidth="10.0" prefWidth="23.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="163.0"
+									minWidth="10.0" prefWidth="99.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="396.0"
+									minWidth="10.0" prefWidth="232.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="385.0"
+									minWidth="10.0" prefWidth="129.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="410.0"
+									minWidth="10.0" prefWidth="146.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="346.0"
+									minWidth="10.0" prefWidth="124.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="466.0"
+									minWidth="10.0" prefWidth="73.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="330.0"
+									minWidth="10.0" prefWidth="163.0" />
+								<ColumnConstraints hgrow="ALWAYS" maxWidth="330.0"
+									minWidth="10.0" prefWidth="17.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="153.0" minHeight="10.0"
+									prefHeight="14.0" vgrow="ALWAYS" />
+								<RowConstraints maxHeight="153.0" minHeight="10.0"
+									prefHeight="41.0" vgrow="ALWAYS" />
+								<RowConstraints maxHeight="157.0" minHeight="10.0"
+									prefHeight="37.0" vgrow="ALWAYS" />
+								<RowConstraints maxHeight="157.0" minHeight="10.0"
+									prefHeight="37.0" vgrow="ALWAYS" />
+								<RowConstraints maxHeight="157.0" minHeight="10.0"
+									prefHeight="42.0" vgrow="ALWAYS" />
+								<RowConstraints maxHeight="157.0" minHeight="10.0"
+									prefHeight="11.0" vgrow="ALWAYS" />
+							</rowConstraints>
+							<children>
+								<Label alignment="CENTER_RIGHT" prefHeight="33.0"
+									prefWidth="89.0" text="Name" GridPane.columnIndex="1"
+									GridPane.rowIndex="1">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<TextField fx:id="nameField" GridPane.columnIndex="2"
+									GridPane.rowIndex="1" />
+								<Label alignment="CENTER_RIGHT" prefHeight="30.0"
+									prefWidth="120.0" text="Amount" GridPane.columnIndex="3"
+									GridPane.rowIndex="1">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<Label alignment="CENTER_RIGHT" prefHeight="30.0"
+									prefWidth="120.0" text="Description" GridPane.columnIndex="5"
+									GridPane.rowIndex="1">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<ComboBox fx:id="typeField" prefHeight="31.0"
+									prefWidth="201.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+								<Label alignment="CENTER_RIGHT" prefHeight="30.0"
+									prefWidth="89.0" text="SIN" GridPane.columnIndex="1"
+									GridPane.rowIndex="2">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<Label alignment="CENTER_RIGHT" prefHeight="30.0"
+									prefWidth="119.0" text="Type" GridPane.columnIndex="3"
+									GridPane.rowIndex="2">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<TextArea fx:id="descriptionField" prefHeight="39.0"
+									prefWidth="188.0" GridPane.columnIndex="6" GridPane.columnSpan="2"
+									GridPane.rowIndex="1" GridPane.rowSpan="2" />
+								<Label alignment="CENTER_RIGHT" prefHeight="34.0"
+									prefWidth="90.0" text="Publisher" GridPane.columnIndex="1"
+									GridPane.rowIndex="3">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<TextField fx:id="sinField" GridPane.columnIndex="2"
+									GridPane.rowIndex="2" />
+								<TextField fx:id="imageField" prefHeight="31.0"
+									prefWidth="266.0" GridPane.columnIndex="6" GridPane.columnSpan="2"
+									GridPane.rowIndex="3" />
+								<Label alignment="CENTER_RIGHT" prefHeight="33.0"
+									prefWidth="119.0" text="Image URL" GridPane.columnIndex="5"
+									GridPane.columnSpan="3" GridPane.rowIndex="3">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<TextField fx:id="publisherField"
+									GridPane.columnIndex="2" GridPane.rowIndex="3" />
+								<Label alignment="CENTER_RIGHT" prefHeight="34.0"
+									prefWidth="119.0" text="Language" GridPane.columnIndex="3"
+									GridPane.rowIndex="3">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<TextField fx:id="languageField" GridPane.columnIndex="4"
+									GridPane.rowIndex="3" />
+								<Label alignment="CENTER_RIGHT" prefHeight="35.0"
+									prefWidth="72.0" text="Author" GridPane.columnIndex="1"
+									GridPane.rowIndex="4">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<TextField fx:id="authorField" GridPane.columnIndex="2"
+									GridPane.rowIndex="4" />
+								<Label alignment="CENTER_RIGHT" prefHeight="37.0"
+									prefWidth="121.0" text="Publish Date" GridPane.columnIndex="3"
+									GridPane.rowIndex="4">
+									<font>
+										<Font size="20.0" />
+									</font>
+								</Label>
+								<DatePicker fx:id="publishDateField"
+									GridPane.columnIndex="4" GridPane.rowIndex="4" />
+								<TextField fx:id="amountField" GridPane.columnIndex="4"
+									GridPane.rowIndex="1" />
+							</children>
+						</GridPane>
+					</center>
+					<top>
+						<Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+					</top>
+				</BorderPane>
+			</children>
+		</HBox>
+		<HBox id="HBox" alignment="CENTER" layoutX="10.0" layoutY="25.0"
+			prefHeight="32.0" prefWidth="988.0" spacing="5.0"
+			AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+			AnchorPane.topAnchor="25.0">
+			<children>
+				<Label alignment="CENTER" minWidth="118.0" prefHeight="32.0"
+					prefWidth="118.0" text="Search:">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<TextField fx:id="filterField" prefHeight="32.0"
+					prefWidth="1004.0" HBox.hgrow="ALWAYS" />
+			</children>
+		</HBox>
+		<HBox id="HBox2" alignment="CENTER" layoutX="10.0" layoutY="25.0"
+			prefHeight="400.0" prefWidth="988.0" spacing="5.0"
+			AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+			AnchorPane.topAnchor="75.0">
+			<children>
+				<TableView fx:id="mediaTable" tableMenuButtonVisible="false"
+					HBox.hgrow="ALWAYS">
+					<columns>
+						<TableColumn fx:id="nameColumn" prefWidth="316.0"
+							text="Name" />
+						<TableColumn fx:id="checkOutColumn" prefWidth="76.0"
+							text="Check out" />
+						<TableColumn fx:id="totalColumn" prefWidth="225.0"
+							text="Total" />
+						<TableColumn fx:id="authorColumn" prefWidth="10.0"
+							text="Author" />
+						<TableColumn fx:id="typeColumn" prefWidth="113.0"
+							text="Type" />
+						<TableColumn fx:id="publishDateColumn" prefWidth="147.0"
+							text="Publish Date" />
+					</columns>
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+				</TableView>
+			</children>
+		</HBox>
+	</children>
+</AnchorPane>

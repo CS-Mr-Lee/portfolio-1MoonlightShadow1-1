@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.culminating.ui.LoginController">
+
+	<padding>
+		<Insets bottom="10" left="25" right="25" top="25" />
+	</padding>
+	<children>
+
+		<Text id="welcome-text" text="Sign in" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+		<Label text="Username:" GridPane.rowIndex="1" />
+
+		<TextField fx:id="userTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+		<Label text="Password:" GridPane.rowIndex="2" />
+
+		<PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+		<HBox alignment="bottom_center" prefHeight="28.0" prefWidth="187.0" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+			<children>
+				<Button onAction="#handleSubmitButtonAction" prefHeight="23.0" prefWidth="70.0" text="Ok" />
+				<Button onAction="#handleCancelButtonAction" prefHeight="23.0" prefWidth="70.0" text="Cancel" />
+			</children>
+		</HBox>
+
+		<Text id="actiontarget" fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+		<HBox prefHeight="12.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+			<children>
+				<RadioButton fx:id="optionStaff" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="Staff">
+				</RadioButton>
+				<RadioButton fx:id="optionUser" mnemonicParsing="false" text="User">
+				</RadioButton>
+
+			</children>
+		</HBox>
+	</children>
+
+	<stylesheets>
+		<URL value="@application.css" />
+	</stylesheets>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+	
+
+</GridPane>
