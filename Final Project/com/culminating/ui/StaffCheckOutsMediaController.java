@@ -170,7 +170,7 @@ public class StaffCheckOutsMediaController {
 
 	}
 
-   /**
+        /**
 	 * Show media detail information when user click the mmedia on the table  
 	 */
 	private void showMediaDetails() {
