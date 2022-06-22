@@ -97,7 +97,6 @@ public class Borrower extends User {
 
     /**
      * Returns all the attributes of the Borrower in a String.
-     *
      * @return  String representation all the attributes of the Borrower.
      */
     public String toString() {
