@@ -1,7 +1,7 @@
 /**
- *Name: Grace Sui
- *Date: 2022-05-04
- *Description: handler class
+ * Name: Grace Sui
+ * Date: 2022-05-04
+ * Description: handler class
  */
 package com.culminating.utils;
 
@@ -31,11 +31,18 @@ import org.json.simple.parser.ParseException;
 public class Handler {
 
     /**
-     *sharedInstance of handler class, single handler instance in system. 
+     * sharedInstance of handler class, single handler instance in system. 
      */
     private final static Handler sharedInstance = new Handler();
    
+    /**
+     * maxRenewTimes of borrow media. 
+     */
     public final static int maxRenewTimes = 3;
+    
+    /**
+     * maxCheckoutBooks of borrow media. 
+     */
     public final static int maxCheckoutBooks = 3;
 
     /**
@@ -87,11 +94,10 @@ public class Handler {
     }
 
     /**
-     * Find media in currentCheckOuts by user
-     * 
-     *@param user, user which checkout media.
-     *@param media, media to find
-     *@return -1 if doesn't find; index in the currentCheckOuts if find
+     * Find media in currentCheckOuts by user 
+     * @param user, user which checkout media.
+     * @param media, media to find
+     * @return -1 if doesn't find; index in the currentCheckOuts if find
      */
     public int searchCheckOutMedia(User user, Media media) {
     	 for (int i = 0; i < this.currentCheckOuts.size(); i++) {
@@ -105,11 +111,10 @@ public class Handler {
     }
     
     /**
-     * Find media in hold medias by user
-     * 
-     *@param user, user which hold the media.
-     *@param media, media to find
-     *@return -1 if doesn't find; index in the hold medias if find
+     * Find media in hold medias by user 
+     * @param user, user which hold the media.
+     * @param media, media to find
+     * @return -1 if doesn't find; index in the hold medias if find
      */
     public int searchHoldMediaItem(User user, Media media) {
     	for (int i = 0; i < this.currHolds.size(); i++) {
@@ -123,10 +128,9 @@ public class Handler {
     }
    
     /**
-     * Find first hold media in hold medias
-     * 
-     *@param media, media to find
-     *@return -1 if doesn't find; index in the hold medias if find
+     * Find first hold media in hold medias 
+     * @param media, media to find
+     * @return -1 if doesn't find; index in the hold medias if find
      */
     public int searchFirstHoldMediaItem(Media media) {
     	for (int i = 0; i < this.currHolds.size(); i++) {
@@ -140,10 +144,9 @@ public class Handler {
     }
     
     /**
-     * Find total hold media quantity in hold medias
-     * 
-     *@param media, media to find
-     *@return 0 if doesn't find; total quantity in the hold medias if find
+     * Find total hold media quantity in hold medias 
+     * @param media, media to find
+     * @return 0 if doesn't find; total quantity in the hold medias if find
      */
     public int searchTotalHoldOnMedia(Media media) {
     	int total = 0;
@@ -157,11 +160,10 @@ public class Handler {
     }
 
     /**
-     * Add hold media in system
-     * 
-     *@param media, the hold media
-     *@param user, the user which will hold the media
-     *@return true if succeed, false if user already hold the media           
+     * Add hold media in system 
+     * @param media, the hold media
+     * @param user, the user which will hold the media
+     * @return true if succeed, false if user already hold the media           
      */
     public boolean addHold(Media media, User user) {
     	boolean succeed = true;
@@ -176,11 +178,10 @@ public class Handler {
     }
 
     /**
-     * remove hold media from user in system
-     * 
-     *@param media, the hold media
-     *@param user, the user which hold the media
-     *@return true if succeed, false if user doesn't hold the media           
+     * remove hold media from user in system 
+     * @param media, the hold media
+     * @param user, the user which hold the media
+     * @return true if succeed, false if user doesn't hold the media           
      */
     public boolean removeHold(Media media, User user) {
     	boolean succeed = true;
@@ -196,10 +197,8 @@ public class Handler {
 
 
     /**
-     * Pay fee in system
-     * 
-     * @param fee, the fee need to be paid
-     *            
+     * Pay fee in system 
+     * @param fee, the fee need to be paid            
      */
     public void payPenalty(Fee fee) {
     	for (int i = 0; i < fines.size(); i++) {
@@ -213,11 +212,11 @@ public class Handler {
     }
 
     /**
-     *renew media in system
+     * renew media in system
      * 
-     *@param user, the user need to be renewed
+     * @param user, the user need to be renewed
      *            
-     *@param media, the media need to be renewed
+     * @param media, the media need to be renewed
      *            
      */
     public void renew(User user, Media media) {
@@ -229,13 +228,13 @@ public class Handler {
     }
 
     /**
-     *checkOut media from system
+     * checkOut media from system
      * 
-     *@param user, the user need to borrow media
+     * @param user, the user need to borrow media
      *            
-     *@param media, the media need to be borrowed
+     * @param media, the media need to be borrowed
      *
-    *@return true if succeed, false if user doesn't checkout the media            
+     * @return true if succeed, false if user doesn't checkout the media            
      */
     public boolean checkOut(User user, Media media) {
     	boolean succeed = true;
@@ -252,11 +251,11 @@ public class Handler {
     }
 
     /**
-     *checkin media to system
+     * checkin media to system
      * 
-     *@param user, the user need to checkin media
+     * @param user, the user need to checkin media
      *            
-     *@param media, the media need to be checkin
+     * @param media, the media need to be checkin
      *            
      */
     public void checkIn(User user, Media media) {
@@ -277,11 +276,11 @@ public class Handler {
     }
 
     /**
-     *Find user in system
+     * Find user in system
      * 
-     *@param user, the user need to be found
-     *@param ignorePassword, true don't need compare password; false, need compare password           
-     *@return -1 if doesn't find; index in users if find.
+     * @param user, the user need to be found
+     * @param ignorePassword, true don't need compare password; false, need compare password           
+     * @return -1 if doesn't find; index in users if find.
      */
     public static int searchUser(User user, boolean ignorePassword) {
     	for (int i = 0; i < users.size(); i++) {
@@ -296,10 +295,10 @@ public class Handler {
     }
 
     /**
-     *Find media in system
+     * Find media in system
      * 
-     *@param media, the media need to be found
-     *@return -1 if doesn't find; index in medias if find.
+     * @param media, the media need to be found
+     * @return -1 if doesn't find; index in medias if find.
      */       
     public static int searchMedia(Media media) {
     	for (int i = 0; i < medias.size(); i++) {
@@ -311,11 +310,11 @@ public class Handler {
     	return -1;
     }
     /**
-     *Add media in system
+     * Add media in system
      * 
-     *@param media, the media need to be added in system
+     * @param media, the media need to be added in system
      *            
-     *@return true if succeed; false if already exist.
+     * @return true if succeed; false if already exist.
      */
     public boolean addMedia(Media media) {
     	boolean succeed = true;
@@ -347,11 +346,11 @@ public class Handler {
     }
 
     /**
-     *Update user in system
+     * Update user in system
      * 
-     *@param user, the user need to be updated in system
+     * @param user, the user need to be updated in system
      *            
-     *@return true if succeed; false if doesn't exist.
+     * @return true if succeed; false if doesn't exist.
      */    
     public boolean updateUser(User user) {
     	boolean succeed = true;
@@ -365,11 +364,11 @@ public class Handler {
     }
 
     /**
-     *Update media in system
+     * Update media in system
      * 
-     *@param media, the media need to be updated in system
+     * @param media, the media need to be updated in system
      *            
-     *@return true if succeed; false if doesn't exist.
+     * @return true if succeed; false if doesn't exist.
      */    
     public boolean updateMedia(Media media) {
     	boolean succeed = true;
@@ -383,11 +382,11 @@ public class Handler {
     }
 
     /**
-     *Remove user from system
+     * Remove user from system
      * 
-     *@param user, the user need to be removed from system
+     * @param user, the user need to be removed from system
      *            
-     *@return true if succeed; false if doesn't exist.
+     * @return true if succeed; false if doesn't exist.
      */
     public boolean removeUser(User user) {
     	boolean succeed = true;
@@ -401,11 +400,11 @@ public class Handler {
     }
 
     /**
-     *Remove media from system
+     * Remove media from system
      * 
-     *@param media, the media need to be removed from system
+     * @param media, the media need to be removed from system
      *            
-     *@return true if succeed; false if doesn't exist.
+     * @return true if succeed; false if doesn't exist.
      */
     public boolean removeMedia(Media media) {
     	boolean succeed = true;
@@ -419,9 +418,9 @@ public class Handler {
     }
 
     /**
-     *Description: Gets the currHolds
+     * Description: Gets the currHolds
      * 
-     *@return the currHolds
+     * @return the currHolds
      */
     public ArrayList<ItemStatus> getCurrHolds() {
     	return currHolds;
@@ -438,18 +437,18 @@ public class Handler {
     }
 
     /**
-     *Description: Gets the fines
+     * Description: Gets the fines
      * 
-     *@return the fines
+     * @return the fines
      */
     public ArrayList<Fee> getFines() {
     	return fines;
     }
 
     /**
-     *Description: Sets fines
+     * Description: Sets fines
      * 
-     *@param fines, the fines
+     * @param fines, the fines
      *            
      */
     public void setFines(ArrayList<Fee> fines) {
@@ -457,18 +456,18 @@ public class Handler {
     }
 
     /**
-     *Description: Gets the current checkout media
+     * Description: Gets the current checkout media
      * 
-     *@return the currentCheckOuts media in system
+     * @return the currentCheckOuts media in system
      */
     public ArrayList<ItemStatus> getCurrentCheckOuts() {
     	return currentCheckOuts;
     }
 
     /**
-     *Description: Sets curent checkout media in system
+     * Description: Sets curent checkout media in system
      * 
-     *@param currentCheckOuts, the current checkout medias
+     * @param currentCheckOuts, the current checkout medias
      *            
      */
     public void setCurrentCheckOuts(ArrayList<ItemStatus> currentCheckOuts) {
@@ -476,27 +475,27 @@ public class Handler {
     }
 
     /**
-     *Description: Gets all users in system
+     * Description: Gets all users in system
      * 
-     *@return user ArrayList in system
+     * @return user ArrayList in system
      */
     public static ArrayList<User> getUsers() {
     	return users;
     }
 
     /**
-     *Description: Gets handler object instance in system
+     * Description: Gets handler object instance in system
      * 
-     *@return sharedInstance in system
+     * @return sharedInstance in system
      */
     public static Handler getSharedinstance() {
     	return sharedInstance;
     }
 
     /**
-     *Description: Sets users in system
+     * Description: Sets users in system
      * 
-     *@param users, the users ArrayList
+     * @param users, the users ArrayList
      *            
      */
     public void setUsers(ArrayList<User> users) {
@@ -504,18 +503,18 @@ public class Handler {
     }
 
     /**
-     *Description: Gets all media in system
+     * Description: Gets all media in system
      * 
-     *@return media ArrayList in system
+     * @return media ArrayList in system
      */
     public static ArrayList<Media> getMedias() {
     	return medias;
     }
 
     /**
-     *Description: Sets media in system
+     * Description: Sets media in system
      * 
-     *@param medias, the media ArrayList
+     * @param medias, the media ArrayList
      *            
      */
     public void setMedias(ArrayList<Media> medias) {
@@ -523,7 +522,7 @@ public class Handler {
     }
    
     /**
-     *Description: Save hold media in holdMedias.json file
+     * Description: Save hold media in holdMedias.json file
      * 
      */
     public static void saveHoldMediaTofile() {
@@ -541,7 +540,7 @@ public class Handler {
     }
     
     /**
-     *Description: read hold media from holdMedias.json file
+     * Description: read hold media from holdMedias.json file
      * 
      */
     public static void readHoldMediasFromFile() {
@@ -565,9 +564,9 @@ public class Handler {
     }
 
     /**
-     *Description: parse hold media and save to curhold arraylist in system
+     * Description: parse hold media and save to curhold arraylist in system
      * 
-     *@param holdMedia, the hold media JSONObject
+     * @param holdMedia, the hold media JSONObject
      *            
      */
     private static void parseHoldMediaObject(JSONObject holdMedia) {
@@ -619,7 +618,7 @@ public class Handler {
     }
     
     /**
-     *Description: Save checkout medias in checkoutMedias.json file
+     * Description: Save checkout medias in checkoutMedias.json file
      * 
      */
     public static void saveCheckoutsMediaTofile() {
@@ -637,7 +636,7 @@ public class Handler {
     }
     
     /**
-     *Description: read checkout media from checkoutMedias.json file
+     * Description: read checkout media from checkoutMedias.json file
      * 
      */   
     public static void readCheckoutMediasFromFile() {
@@ -662,9 +661,9 @@ public class Handler {
     }
     
     /**
-     *Description: parse checkout media and save to currentCheckOuts arraylist in system
+     * Description: parse checkout media and save to currentCheckOuts arraylist in system
      * 
-     *@param checkoutMedia, the checkoutMedia JSONObject
+     * @param checkoutMedia, the checkoutMedia JSONObject
      *            
      */
     private static void parseCheckoutMediaObject(JSONObject checkoutMedia) {
@@ -716,7 +715,7 @@ public class Handler {
     }
 
     /**
-     *Description: Save medias in medias.json file
+     * Description: Save medias in medias.json file
      * 
      */
     public static void saveMediasTofile() {
@@ -734,7 +733,7 @@ public class Handler {
     }
     
     /**
-     *Description: read medias from medias.json file
+     * Description: read medias from medias.json file
      * 
      */     
     public static void readMediasFromFile() {
@@ -759,9 +758,9 @@ public class Handler {
     }
     
     /**
-     *Description: parse media and save to medias arraylist in system
+     * Description: parse media and save to medias arraylist in system
      * 
-     *@param media, the media JSONObject
+     * @param media, the media JSONObject
      *            
      */
     private static void parseMediaObject(JSONObject media) {
@@ -813,7 +812,7 @@ public class Handler {
     }
 
     /**
-     *Description: Save users in users.json file
+     * Description: Save users in users.json file
      * 
      */
     public static void saveUsersTofile() {
@@ -831,7 +830,7 @@ public class Handler {
     }
     
     /**
-     *Description: read users from users.json file
+     * Description: read users from users.json file
      * 
      */       
     public static void readUsersFromFile() {
@@ -857,9 +856,9 @@ public class Handler {
     }
 
     /**
-     *Description: parse user and save to users arraylist in system
+     * Description: parse user and save to users arraylist in system
      * 
-     *@param user, the user JSONObject
+     * @param user, the user JSONObject
      *            
      */
     private static void parseUserObject(JSONObject user) {
@@ -893,6 +892,7 @@ public class Handler {
 
     /**
      * Returns description of the handler.
+     * @return String description of the handler
      *
      */
     public String toString() {
