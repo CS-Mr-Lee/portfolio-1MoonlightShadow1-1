@@ -12,6 +12,10 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 public class EBook extends Book {
+    
+    /**
+     * default constructor a EBook
+     */
     public EBook() {
         super(); //inherits the default constructor of book
         this.setType("EBook");
