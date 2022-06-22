@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: transaction class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: transaction class
+ */
 package com.culminating.payment;
 
 import java.util.ArrayList;
@@ -23,14 +23,15 @@ public class Transaction {
 
    /**
     * Description: crreate the fee of Transaction
-    *  @param fee, the fee of Transaction
+    * @param fee, the fee of Transaction
     */
    public void createFee(Fee fee) {
       fees.add(fee);
    }
 
    /**
-    *Description: prints the attributes of the Transaction
+    * Description: prints the attributes of the Transaction
+    * @return String all the attributes of the Transaction
     */
    @Override
    public String toString() {
