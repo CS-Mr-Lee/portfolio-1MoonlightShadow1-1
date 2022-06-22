@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: ItenStatus class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: ItenStatus class
+ */
 package com.culminating.utils;
 
 import java.util.Date;
@@ -15,12 +15,12 @@ import com.culminating.media.Media;
 public class ItemStatus extends Log {
 
    /**
-    * user of the Log
+    * status of the ItemStatus
     */
    private boolean status;
     
    /**
-    * user of the Log
+    * renewTimes of the ItemStatus
     */
    private int renewTimes;
 
@@ -49,9 +49,9 @@ public class ItemStatus extends Log {
    }
     
    /**
-    *Description: Gets json object represent of this class object
+    * Description: Gets json object represent of this class object
     * 
-    *@return jsonobject
+    * @return jsonobject
     */
    public JSONObject getJSONObject() {
     	JSONObject obj = super.getJSONObject();
@@ -132,7 +132,8 @@ public class ItemStatus extends Log {
    }
 
    /**
-    *Description: prints all the attributes of the ItemStatus
+    * Description: prints all the attributes of the ItemStatus
+    * @return String all the attributes of the ItemStatus
     */
    public String toString() {
       return super.toString() + "\nAvailable: " + this.status + "\nRenews: " + this.renewTimes;
