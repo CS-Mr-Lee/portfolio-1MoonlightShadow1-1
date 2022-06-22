@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: Log class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: Log class
+ */
 package com.culminating.utils;
 
 import java.time.LocalDate;
@@ -97,9 +97,9 @@ public class Log {
     }
 
     /**
-     *Description: Gets json object represent of this class object
+     * Description: Gets json object represent of this class object
      * 
-     *@return jsonobject
+     * @return jsonobject
      */
     public JSONObject getJSONObject() {
        JSONObject obj = new JSONObject();
@@ -185,9 +185,9 @@ public class Log {
     }
 
     /**
-    * Description: Gets the userName of log
-    * @return the userName of log
-    */
+     * Description: Gets the userName of log
+     * @return the userName of log
+     */
     public String getUserName() {
        return user.getName();
     }
@@ -249,9 +249,9 @@ public class Log {
     }
 
     /**
-    * Description: Gets the type of log
-    * @return the type of log
-    */
+     * Description: Gets the type of log
+     * @return the type of log
+     */
     public String getType() {
        return item.getType();
     }
@@ -281,7 +281,8 @@ public class Log {
     }
 
     /**
-     *Description: prints the attributes of the log
+     * Description: prints the attributes of the log
+     * @return String all the attributes of the log
      */
     public String toString() {
        return "User: " + this.user.toString() + "\nItem: " + this.item.toString() + "\nDate: " + this.date
