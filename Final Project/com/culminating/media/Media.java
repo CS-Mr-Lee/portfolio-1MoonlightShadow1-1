@@ -1,7 +1,7 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: media class
+* Name(s): Franklin, Mike, Grace, Sophia
+* Date: 2022-05-04
+* Description: media class
 */
 
 //packages media in com.culminating.media
@@ -16,29 +16,80 @@ import org.json.simple.JSONObject;
 import com.culminating.utils.Library;
 
 public class Media {
-    private LocalDate publishDate; //the date of publication of the media
-    private String author; //the author of the media's name
-    private int SIN; //the SIN of the media
-    private String language; //the language the media is in
-    private String publisher; //the media's publisher's name
-    private Character ageRating; //the age rating of the media
-    private String genre; //the genre of the media
+    /**
+     * the date of publication of the media
+     */
+    private LocalDate publishDate; 
+    
+    /**
+     * the author of the media's name
+     */	
+    private String author; 
+    
+    /**
+     * the SIN of the media
+     */
+    private int SIN; 
+    
+    /**
+     * the language the media is in
+     */
+    private String language; 
+    
+    /**
+     * the media's publisher's name
+     */
+    private String publisher; 
+    
+    /**
+     * the age rating of the media
+     */
+    private Character ageRating; 
+    
+    /**
+     * the genre of the media
+     */
+    private String genre; 
+	
+    /**
+     * the name of the media
+     */
     private String name;
+    
+    /**
+     * the checkOutNumber of the media
+     */
     private int checkOutNumber;
+    
+    /**
+     * the totalNumber of the media
+     */
     private int totalNumber;
+    
+    /**
+     * the imagePath of the media
+     */
     private String imagePath;
+    
+    /**
+     * the description of the media
+     */
     private String description;
+    
+    /**
+     * the type of the media
+     */
     private String type;
 
     /**
-     *default constructor a media 
-     *sets publishDate to new Date()
-     *sets author to ""
-     *sets SIN to -1
-     *sets language to ""
-     *sets publisher to ""
-     *sets ageRating to 0
-     *sets genre to ""
+     * default constructor a media 
+     * sets publishDate to new Date()
+     * sets author to ""
+     * sets SIN to -1
+     * sets language to ""
+     * sets publisher to ""
+     * sets ageRating to 0
+     * sets genre to ""
      */
     public Media() {
         this.author = "";
@@ -50,14 +101,14 @@ public class Media {
     }
 
     /**
-     *Constructor a media: sets publishDate, author, SIN, language, publisher, ageRating, and genre from parameters
-     *@param publishDate, the media's date of publication 
-     *@param author, the media's author's name
-     *@param SIN, the SIN of the media
-     *@param language, the language the media is in
-     *@param publisher, the publisher of the media
-     *@param ageRating, the age rating of the media
-     *@param genre, the genre of the media
+     * Constructor a media: sets publishDate, author, SIN, language, publisher, ageRating, and genre from parameters
+     * @param publishDate, the media's date of publication 
+     * @param author, the media's author's name
+     * @param SIN, the SIN of the media
+     * @param language, the language the media is in
+     * @param publisher, the publisher of the media
+     * @param ageRating, the age rating of the media
+     * @param genre, the genre of the media
      */
     public Media(String name, LocalDate publishDate, String author, int SIN, String language,
             String publisher, Character ageRating, String genre, int checkOutNumber, int totalNumber, String imagePath, String description) {
@@ -76,9 +127,9 @@ public class Media {
     }
     
     /**
-     *Description: Gets json object represent of this class object
+     * Description: Gets json object represent of this class object
      * 
-     *@return jsonobject
+     * @return jsonobject
      */
     public JSONObject getJSONObject() {
         JSONObject obj = new JSONObject();
@@ -115,137 +166,137 @@ public class Media {
     }    
         
     /**
-     *Description: gets the date of publication
-     *@return Date publishDate of media
+     * Description: gets the date of publication
+     * @return Date publishDate of media
      */
     public LocalDate getPublishDate() {
         return this.publishDate;
     }
         
     /**
-     *Description: sets the publication date
-     *@param publishDate, the media's date of publication
+     * Description: sets the publication date
+     * @param publishDate, the media's date of publication
      */
     public void setPublishDate(LocalDate publishDate) {
         this.publishDate = publishDate;
     }
         
     /**
-     *Description: gets the Author's name
-     *@return String author of media
+     * Description: gets the Author's name
+     * @return String author of media
      */
     public String getAuthor() {
         return this.author;
     }
         
     /**
-     *Description: sets the name of the author
-     *@param author, the media's author's name 
+     * Description: sets the name of the author
+     * @param author, the media's author's name 
      */
     public void setAuthor(String author) {
         this.author = author;
     }
         
     /**
-     *Description: gets the SIN 
-     *@return int SIN of the media
+     * Description: gets the SIN 
+     * @return int SIN of the media
      */
     public int getSIN() {
         return this.SIN;
     }
         
     /**
-     *Description: sets the SIN
-     *@param SIN, the unique identity of the media
+     * Description: sets the SIN
+     * @param SIN, the unique identity of the media
      */
     public void setSIN(int SIN) {
         this.SIN = SIN;
     }
         
     /**
-     *Description: gets the language
-     *@return String language of the media
+     * Description: gets the language
+     * @return String language of the media
      */
     public String getLanguage() {
         return this.language;
     }
         
     /**
-     *Description: sets the language
-     *@param language, the language of the media
+     * Description: sets the language
+     * @param language, the language of the media
      */
     public void setLanguage(String language) {
         this.language = language;
     }
         
     /**
-     *Description: gets the publisher's name
-     *@return String publisher of the media
+     * Description: gets the publisher's name
+     * @return String publisher of the media
      */
     public String getPublisher() {
         return this.publisher;
     }
         
     /**
-     *Description: sets the publisher's name 
-     *@param publisher, the publisher's name
+     * Description: sets the publisher's name 
+     * @param publisher, the publisher's name
      */
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
         
     /**
-     *Description: gets the age rating
-     *@return Character ageRating of the media
+     * Description: gets the age rating
+     * @return Character ageRating of the media
      */
     public Character getAgeRating() {
         return this.ageRating;
     }
         
     /**
-     *Description: sets the age rating
-     *@param ageRating, the age rating of the media
+     * Description: sets the age rating
+     * @param ageRating, the age rating of the media
      */
     public void setAgeRating(Character ageRating) {
         this.ageRating = ageRating;
     }
         
     /**
-     *Description: gets the genre
-     *@return String genre of the media
+     * Description: gets the genre
+     * @return String genre of the media
      */
     public String getGenre() {
         return this.genre;
     }
         
     /**
-     *Description: sets the genre
-     *@param genre, the genre of the media
+     * Description: sets the genre
+     * @param genre, the genre of the media
      */
     public void setGenre(String genre) {
         this.genre = genre;
     }
 
     /**
-    * Description: Gets the name of media
-    * @return the name of media
-    */
+     * Description: Gets the name of media
+     * @return the name of media
+     */
     public String getName() {
        return name;
     }
 
     /**
-     *Description: sets the name
-     *@param name, the name of the media
+     * Description: sets the name
+     * @param name, the name of the media
      */
     public void setName(String name) {
        this.name = name;
     }
 
     /**
-    * Description: Gets the checkOutNumber of media
-    * @return the checkOutNumber of media
-    */
+     * Description: Gets the checkOutNumber of media
+     * @return the checkOutNumber of media
+     */
     public int getCheckOutNumber() {
        return checkOutNumber;
     }
@@ -259,9 +310,9 @@ public class Media {
     }
 
     /**
-    * Description: Gets the totalNumber of media
-    * @return the totalNumber of media
-    */
+     * Description: Gets the totalNumber of media
+     * @return the totalNumber of media
+     */
     public int getTotalNumber() {
        return totalNumber;
     }
@@ -275,9 +326,9 @@ public class Media {
     }
 
     /**
-    * Description: Gets the imagePath of media
-    * @return the imagePath of media
-    */
+     * Description: Gets the imagePath of media
+     * @return the imagePath of media
+     */
     public String getImagePath() {
        return imagePath;
     }
@@ -290,9 +341,10 @@ public class Media {
        this.imagePath = imagePath;
     }
 
-	/**
-    *Description: prints all the attributes of the media
-    */
+    /**
+     * Description: prints all the attributes of the media
+     * @return String all the attributes of the media
+     */
     @Override
     public String toString() {
         return "{" +
