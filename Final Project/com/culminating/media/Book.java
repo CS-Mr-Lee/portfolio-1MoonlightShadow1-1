@@ -94,7 +94,7 @@ public class Book extends Media {
     /**
      * Description: Gets json object represent of this class object
      * 
-     *@return jsonobject
+     * @return jsonobject
      */
     public JSONObject getJSONObject() {
         JSONObject obj = super.getJSONObject();
@@ -171,6 +171,7 @@ public class Book extends Media {
 
     /**
      * Description: prints all the attributes of the book
+     * @return String all of the attributes of the book
      */
     public String toString() {
         return "{" +	", name='" + getName() + "'" + " publishDate='" + getPublishDate() + "'" +
