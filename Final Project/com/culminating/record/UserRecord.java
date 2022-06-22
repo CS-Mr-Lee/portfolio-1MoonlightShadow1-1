@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: User Record class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: User Record class
+ */
 package com.culminating.record;
 
 import java.util.ArrayList;
@@ -136,7 +136,8 @@ public class UserRecord {
     }
 
     /**
-     *Description: prints all the attributes of the UserRecord
+     * Description: prints all the attributes of the UserRecord
+     * @return String all the attributes of the UserRecord
      */
     public String toString() {
         String ret = "";
