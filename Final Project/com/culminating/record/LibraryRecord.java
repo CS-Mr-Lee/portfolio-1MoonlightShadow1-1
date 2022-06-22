@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: Library record class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: Library record class
+ */
 package com.culminating.record;
 
 public class LibraryRecord {
@@ -70,17 +70,18 @@ public class LibraryRecord {
     }
     
     /**
-     *Description: prints all the attributes of the LibraryRecord
+     * Description: prints all the attributes of the LibraryRecord
+     * @return String all the attributes of the LibraryRecord
      */
     public String toString() {
         String ret = "";
         ret += "Media Records: ";
         for (int i = 0; i < this.mediaRecords.length; i++) {
-         ret += mediaRecords[i].toString() + ",";
+            ret += mediaRecords[i].toString() + ",";
         }
         ret = ret.substring(0, ret.length()-1);
         for (int i = 0; i < this.userRecords.length; i++) {
-         ret += userRecords[i].toString() + ",";
+            ret += userRecords[i].toString() + ",";
         }
         ret = ret.substring(0, ret.length()-1);
         return ret;
