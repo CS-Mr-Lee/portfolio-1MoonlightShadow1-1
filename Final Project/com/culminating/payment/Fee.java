@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: fee class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: fee class
+ */
 
 //packages the fee into com.culminating.payment
 package com.culminating.payment;
@@ -44,14 +44,14 @@ public class Fee {
     private boolean fulfilled; 
 
     /**
-    *default constructor a fee: call superclass payment
-    *sets recipient to new User()
-    *sets item = new Media[1] to new Media()
-    *sets the amount to -6.9
-    *sets the date to new Date()
-    *sets the details to ""
-    *sets fulfilled to false
-    */
+     * default constructor a fee: call superclass payment
+     * sets recipient to new User()
+     * sets item = new Media[1] to new Media()
+     * sets the amount to -6.9
+     * sets the date to new Date()
+     * sets the details to ""
+     * sets fulfilled to false
+     */
     public Fee() {
         this.recipient = new User();
         (this.item = new Media[1])[0] = new Media();
@@ -62,14 +62,14 @@ public class Fee {
     }
 
     /**
-    *Constructor a fee: sets recipient, item, amount, date, details, and fulfilled from parameters
-    *@param recipient, the recipient of the fee
-    *@param item, the item the fee belongs to
-    *@param amount, the amount of the fee
-    *@param date, the date the fee is due
-    *@param details, the details of the fee
-    *@param fulfilled, whether or not the fee is fulfilled
-    */
+     * Constructor a fee: sets recipient, item, amount, date, details, and fulfilled from parameters
+     * @param recipient, the recipient of the fee
+     * @param item, the item the fee belongs to
+     * @param amount, the amount of the fee
+     * @param date, the date the fee is due
+     * @param details, the details of the fee
+     * @param fulfilled, whether or not the fee is fulfilled
+     */
     public Fee(User recipient, Media[] item, double amount, Date date, String details,
             boolean fulfilled) {
         this.recipient = recipient;
@@ -85,7 +85,7 @@ public class Fee {
      * @return the recipient of fee
      */    
     public User getRecipient() {
-      return recipient;
+        return recipient;
    }
 
    /**
@@ -93,7 +93,7 @@ public class Fee {
     * @param recipient, the recipient of fee
     */
    public void setRecipient(User recipient) {
-      this.recipient = recipient;
+       this.recipient = recipient;
    }
 
    /**
@@ -101,7 +101,7 @@ public class Fee {
      * @return the media item of fee
      */ 
    public Media[] getItem() {
-      return item;
+       return item;
    }
 
    /**
@@ -109,7 +109,7 @@ public class Fee {
     * @param item, the item of fee
     */
    public void setItem(Media[] item) {
-      this.item = item;
+       this.item = item;
    }
 
    /**
@@ -117,7 +117,7 @@ public class Fee {
     * @return the amount of fee
     */
    public double getAmount() {
-      return amount;
+       return amount;
    }
 
    /**
@@ -125,7 +125,7 @@ public class Fee {
     * @param amount, the amount of fee
     */
    public void setAmount(double amount) {
-      this.amount = amount;
+       this.amount = amount;
    }
 
    /**
@@ -141,7 +141,7 @@ public class Fee {
     * @param date, the date of fee
     */
    public void setDate(Date date) {
-      this.date = date;
+       this.date = date;
    }
 
    /**
@@ -149,7 +149,7 @@ public class Fee {
     * @return the details of fee
     */
    public String getDetails() {
-      return details;
+       return details;
    }
 
    /**
@@ -157,15 +157,15 @@ public class Fee {
     * @param details, the details of fee
     */
    public void setDetails(String details) {
-      this.details = details;
+       this.details = details;
    }
 
-	/**
+   /**
     * Description: Gets the fulfilled of fee
     * @return the fulfilled of fee
     */
    public boolean isFulfilled() {
-      return fulfilled;
+       return fulfilled;
    }
 
    /**
@@ -173,18 +173,19 @@ public class Fee {
     * @param fulfilled, the fulfilled of fee
     */
    public void setFulfilled(boolean fulfilled) {
-      this.fulfilled = fulfilled;
+       this.fulfilled = fulfilled;
    }
 
    /**
-    *Description: turns fulfilled to true 
+    * Description: turns fulfilled to true 
     */
    public void pay() {
-      this.fulfilled = true;
+       this.fulfilled = true;
    }
     
    /**
-    *Description: prints the attributes of the fee
+    * Description: prints the attributes of the fee
+    * @return String the attributes of the fee
     */
    @Override
    public String toString() {
