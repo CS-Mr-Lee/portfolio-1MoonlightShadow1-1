@@ -78,8 +78,8 @@ public class StaffParentMainController implements Initializable {
     */
    @Override
    public void initialize(URL location, ResourceBundle resources) {
-   	parentLeftVbox.setBackground(YellowBackground);
-   	logoPane.setBackground(blueBackground);
+   	  parentLeftVbox.setBackground(YellowBackground);
+   	  logoPane.setBackground(blueBackground);
    }
 
    /**
@@ -87,24 +87,24 @@ public class StaffParentMainController implements Initializable {
     * @param user, the current login user.
     */
    public void initData(User user) {
-   	this.currentUser = user;
-   	userName.setText("Welcome " + user.getName());
-   	FileInputStream input;
-   	try {
-   	   input = new FileInputStream("com//culminating//ui//schoolbanner.jpg");
-   	   Image image = new Image(input);
-   	   logo.setImage(image);
-   	   logo.fitWidthProperty().bind(logoPane.widthProperty());
-   	   logo.setPreserveRatio(false);
+     	this.currentUser = user;
+     	userName.setText("Welcome " + user.getName());
+   	  FileInputStream input;
+   	  try {
+   	     input = new FileInputStream("com//culminating//ui//schoolbanner.jpg");
+   	     Image image = new Image(input);
+   	     logo.setImage(image);
+   	     logo.fitWidthProperty().bind(logoPane.widthProperty());
+   	     logo.setPreserveRatio(false);
    	   
-   	   FileInputStream input2 = new FileInputStream("com//culminating//ui//mainpage.jpg");
-   	   Image image2 = new Image(input2);
-   	   mainPageImg.setImage(image2);
-   	   mainPageImg.setPreserveRatio(true);
-   	   parentPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-   	} catch (FileNotFoundException e) {
-   	   e.printStackTrace();
-   	}
+   	     FileInputStream input2 = new FileInputStream("com//culminating//ui//mainpage.jpg");
+   	     Image image2 = new Image(input2);
+   	     mainPageImg.setImage(image2);
+   	     mainPageImg.setPreserveRatio(true);
+   	     parentPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+   	  } catch (FileNotFoundException e) {
+   	     e.printStackTrace();
+   	  }
    }
 
    /**
@@ -113,14 +113,14 @@ public class StaffParentMainController implements Initializable {
     */
    @FXML
    private void showUsers(ActionEvent event) {
-   	FXMLLoader loader = new FXMLLoader();
-   	loader.setLocation(getClass().getResource("StaffDefineUser.fxml"));
-   	try {
-   	   Pane myPane = loader.load();
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+   	  FXMLLoader loader = new FXMLLoader();
+   	  loader.setLocation(getClass().getResource("StaffDefineUser.fxml"));
+   	  try {
+   	     Pane myPane = loader.load();
+   	     parentPane.setCenter(myPane);
+   	  } catch (IOException e) {
+   	     e.printStackTrace();
+     	}
    }
    
    /**
@@ -129,14 +129,14 @@ public class StaffParentMainController implements Initializable {
     */
    @FXML
    private void swithUser(ActionEvent event) {
-   	try {
+     	try {
          FXMLLoader loader = new FXMLLoader();
          loader.setLocation(getClass().getResource("Login.fxml"));
-   	   Pane myPane = loader.load();
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+   	     Pane myPane = loader.load();
+   	     parentPane.setCenter(myPane);
+     	} catch (IOException e) {
+   	     e.printStackTrace();
+   	  }
    }
    
    /**
@@ -145,14 +145,14 @@ public class StaffParentMainController implements Initializable {
     */
    @FXML
    private void showMedias(ActionEvent event) {
-   	FXMLLoader loader = new FXMLLoader();
-   	loader.setLocation(getClass().getResource("StaffDefineMedia.fxml"));
-   	try {
-   	   Pane myPane = loader.load();
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+     	FXMLLoader loader = new FXMLLoader();
+   	  loader.setLocation(getClass().getResource("StaffDefineMedia.fxml"));
+   	  try {
+   	     Pane myPane = loader.load();
+   	     parentPane.setCenter(myPane);
+     	} catch (IOException e) {
+   	     e.printStackTrace();
+     	}
    }
    
    /**
@@ -161,16 +161,16 @@ public class StaffParentMainController implements Initializable {
     */
    @FXML
    private void showHolds(ActionEvent event) {
-   	FXMLLoader loader = new FXMLLoader();
-   	loader.setLocation(getClass().getResource("StaffHoldMedia.fxml"));
-   	try {
-   	   Pane myPane = loader.load();
-   	   StaffHoldMediaController mainWindowController = loader.getController();
-   	   mainWindowController.initData(currentUser);
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+     	FXMLLoader loader = new FXMLLoader();
+   	  loader.setLocation(getClass().getResource("StaffHoldMedia.fxml"));
+   	  try {
+   	     Pane myPane = loader.load();
+   	     StaffHoldMediaController mainWindowController = loader.getController();
+   	     mainWindowController.initData(currentUser);
+   	     parentPane.setCenter(myPane);
+     	} catch (IOException e) {
+   	     e.printStackTrace();
+   	  }
    }
    
    /**
@@ -179,15 +179,15 @@ public class StaffParentMainController implements Initializable {
     */
    @FXML
    private void showCheckouts(ActionEvent event) {
-   	FXMLLoader loader = new FXMLLoader();
-   	loader.setLocation(getClass().getResource("StaffCheckOutsMedia.fxml"));
-   	try {
-   	   Pane myPane = loader.load();
-   	   StaffCheckOutsMediaController mainWindowController = loader.getController();
-   	   mainWindowController.initData(currentUser);
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+     	FXMLLoader loader = new FXMLLoader();
+     	loader.setLocation(getClass().getResource("StaffCheckOutsMedia.fxml"));
+   	  try {
+   	     Pane myPane = loader.load();
+   	     StaffCheckOutsMediaController mainWindowController = loader.getController();
+   	     mainWindowController.initData(currentUser);
+   	     parentPane.setCenter(myPane);
+     	} catch (IOException e) {
+   	     e.printStackTrace();
+   	  }
    }
 }
