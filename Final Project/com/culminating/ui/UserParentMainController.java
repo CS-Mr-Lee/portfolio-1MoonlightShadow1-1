@@ -79,8 +79,8 @@ public class UserParentMainController implements Initializable {
     */
    @Override
    public void initialize(URL location, ResourceBundle resources) {
-   	parentLeftVbox.setBackground(YellowBackground);
-   	logoPane.setBackground(blueBackground);
+      parentLeftVbox.setBackground(YellowBackground);
+      logoPane.setBackground(blueBackground);
    }
 
    /**
@@ -88,24 +88,24 @@ public class UserParentMainController implements Initializable {
     * @param user, the current login user.
     */
    public void initData(User user) {
-   	this.currentUser = user;
-   	userName.setText("Welcome " + user.getName());
-   	FileInputStream input;
-   	try {
-   	   input = new FileInputStream("com//culminating//ui//schoolbanner.jpg");
-   	   Image image = new Image(input);
-   	   logo.setImage(image);
-   	   logo.fitWidthProperty().bind(logoPane.widthProperty());
-   	   logo.setPreserveRatio(false);
-   	   
-   	   FileInputStream input2 = new FileInputStream("com//culminating//ui//mainpage.jpg");
-   	   Image image2 = new Image(input2);
-   	   mainPageImg.setImage(image2);
-   	   mainPageImg.setPreserveRatio(true);
-   	   parentPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-   	} catch (FileNotFoundException e) {
-   	   e.printStackTrace();
-   	}
+      this.currentUser = user;
+      userName.setText("Welcome " + user.getName());
+      FileInputStream input;
+      try {
+         input = new FileInputStream("com//culminating//ui//schoolbanner.jpg");
+         Image image = new Image(input);
+         logo.setImage(image);
+         logo.fitWidthProperty().bind(logoPane.widthProperty());
+         logo.setPreserveRatio(false);
+         
+         FileInputStream input2 = new FileInputStream("com//culminating//ui//mainpage.jpg");
+         Image image2 = new Image(input2);
+         mainPageImg.setImage(image2);
+         mainPageImg.setPreserveRatio(true);
+         parentPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+      } catch (FileNotFoundException e) {
+         e.printStackTrace();
+      }
    }
 
    /**
@@ -114,16 +114,16 @@ public class UserParentMainController implements Initializable {
     */
    @FXML
    private void checkOut(ActionEvent event) {
-   	FXMLLoader loader = new FXMLLoader();
-   	loader.setLocation(getClass().getResource("UserCheckOutsMedia.fxml"));
-   	try {
-   	   Pane myPane = loader.load();
-   	   UserCheckOutsMediaController mainWindowController = loader.getController();
-   	   mainWindowController.initData(currentUser);
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+      FXMLLoader loader = new FXMLLoader();
+      loader.setLocation(getClass().getResource("UserCheckOutsMedia.fxml"));
+      try {
+         Pane myPane = loader.load();
+         UserCheckOutsMediaController mainWindowController = loader.getController();
+         mainWindowController.initData(currentUser);
+         parentPane.setCenter(myPane);
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
    }
    
    /**
@@ -132,14 +132,14 @@ public class UserParentMainController implements Initializable {
     */
    @FXML
    private void swithUser(ActionEvent event) {
-   	try {
-      	FXMLLoader loader = new FXMLLoader();
-      	loader.setLocation(getClass().getResource("Login.fxml"));
-   	   Pane myPane = loader.load();
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+      try {
+         FXMLLoader loader = new FXMLLoader();
+         loader.setLocation(getClass().getResource("Login.fxml"));
+         Pane myPane = loader.load();
+         parentPane.setCenter(myPane);
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
    }
    
    /**
@@ -148,16 +148,16 @@ public class UserParentMainController implements Initializable {
     */
    @FXML
    private void hold(ActionEvent event) {
-   	try {
+      try {
          FXMLLoader loader = new FXMLLoader();
          loader.setLocation(getClass().getResource("UserHoldMedia.fxml"));
-   	   Pane myPane = loader.load();
-   	   UserHoldMediaController mainWindowController = loader.getController();
-   	   mainWindowController.initData(currentUser);
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+         Pane myPane = loader.load();
+         UserHoldMediaController mainWindowController = loader.getController();
+         mainWindowController.initData(currentUser);
+         parentPane.setCenter(myPane);
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
    }
    
    /**
@@ -166,15 +166,15 @@ public class UserParentMainController implements Initializable {
     */
    @FXML
    private void showMedia(ActionEvent event) {
-   	FXMLLoader loader = new FXMLLoader();
-   	loader.setLocation(getClass().getResource("UserBorrowMedia.fxml"));
-   	try {
-   	   Pane myPane = loader.load();
-   	   UserBorrowMediaController mainWindowController = loader.getController();
-   	   mainWindowController.initData(currentUser);
-   	   parentPane.setCenter(myPane);
-   	} catch (IOException e) {
-   	   e.printStackTrace();
-   	}
+      FXMLLoader loader = new FXMLLoader();
+      loader.setLocation(getClass().getResource("UserBorrowMedia.fxml"));
+      try {
+         Pane myPane = loader.load();
+         UserBorrowMediaController mainWindowController = loader.getController();
+         mainWindowController.initData(currentUser);
+         parentPane.setCenter(myPane);
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
    }
 }
