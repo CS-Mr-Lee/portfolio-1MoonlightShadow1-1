@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: hold class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: hold class
+ */
 package com.culminating.utils;
 
 import java.util.Date;
@@ -55,7 +55,8 @@ public class Hold extends Log {
    }
 
    /**
-    *Description: prints the attributes of the Hold
+    * Description: prints the attributes of the Hold
+    * @return String all the attributes of the Hold
     */
    public String toString() {
     	return super.toString() + "\nArrived: " + this.arrived;
