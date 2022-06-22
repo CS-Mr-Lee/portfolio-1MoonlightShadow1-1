@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: Library class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: Library class
+ */
 package com.culminating.utils;
 
 import java.util.ArrayList;
@@ -146,7 +146,8 @@ public class Library {
    }
 
    /**
-    *Description: prints the attributes of the Library
+    * Description: prints the attributes of the Library
+    * @return String all the attributes of the Library
     */
    @Override
    public String toString() {
