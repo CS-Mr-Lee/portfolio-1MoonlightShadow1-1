@@ -173,9 +173,7 @@ public class Book extends Media {
      * Description: prints all the attributes of the book
      */
     public String toString() {
-        return "{" +
-        		", name='" + getName() + "'" +
-                " publishDate='" + getPublishDate() + "'" +
+        return "{" +	", name='" + getName() + "'" + " publishDate='" + getPublishDate() + "'" +
                 ", author='" + getAuthor() + "'" +
                 ", SIN='" + getSIN() + "'" +
                 ", language='" + getLanguage() + "'" +
@@ -184,7 +182,6 @@ public class Book extends Media {
                 ", genre='" + getGenre() + "'" +
                 ", pages='" + getPages() + "'" +
                 ", isHardcover='" + getIsHardcover() + "'" +
-                ", isbn='" + getIsbn() + "'" +
-                "}";
+                ", isbn='" + getIsbn() + "'" + "}";
     }
 }
