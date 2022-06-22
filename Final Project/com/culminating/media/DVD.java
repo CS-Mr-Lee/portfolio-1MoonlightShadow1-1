@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: DVD class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: DVD class
+ */
 
 //packages the DVD in com.culminating.media
 package com.culminating.media;
@@ -68,7 +68,7 @@ public class DVD extends Media {
     /**
      * Description: Gets json object represent of this class object
      * 
-     *@return jsonobject
+     * @return jsonobject
      */
     public JSONObject getJSONObject() {
         JSONObject obj = super.getJSONObject();
