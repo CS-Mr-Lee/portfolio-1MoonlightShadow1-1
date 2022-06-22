@@ -1,8 +1,8 @@
 /**
-*Name(s): Franklin, Mike, Grace, Sophia
-*Date: 2022-05-04
-*Description: Media record class
-*/
+ * Name(s): Franklin, Mike, Grace, Sophia
+ * Date: 2022-05-04
+ * Description: Media record class
+ */
 package com.culminating.record;
 
 import java.util.ArrayList;
@@ -106,7 +106,8 @@ public class MediaRecord {
     }
 
     /**
-     *Description: prints all the attributes of the MediaRecord
+     * Description: prints all the attributes of the MediaRecord
+     * @return String all the attributes of the MediaRecord
      */
     public String toString() {
         String ret = "";
