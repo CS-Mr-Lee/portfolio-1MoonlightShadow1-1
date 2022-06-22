@@ -18,16 +18,27 @@ import org.json.simple.JSONObject;
 import com.culminating.utils.Library;
 
 public class Book extends Media {
-    private int pages; //amount of pages a book has
-    private boolean isHardcover; //whether the book is hardcover
-    private int isbn; //the book serial number
+    /**
+     * amount of pages a book has
+     */
+    private int pages;
+    
+    /**
+     * whether the book is hardcover
+     */
+    private boolean isHardcover; 
+    
+    /**
+     * the book serial number
+     */
+    private int isbn; 
 
     /**
-     *default constructor a book: call superclass media
-     *sets pages to -1
-     *sets isHardcover to false
-     *sets isbn to -1
-     *sets type to book
+     * default constructor a book: call superclass media
+     * sets pages to -1
+     * sets isHardcover to false
+     * sets isbn to -1
+     * sets type to book
      */
     public Book() {
         this.pages = -1;
@@ -37,16 +48,16 @@ public class Book extends Media {
     }
 
     /**
-     *Constructor a book: sets publishDate, author, SIN, language, publisher, ageRating, and genre from parameters
-     *@param publishDate, the publish date of the book
-     *@param author, the book's author's name
-     *@param SIN, the unique identity of the book
-     *@param language, the language the book is in
-     *@param publisher, the book's publisher's name 
-     *@param ageRating, the age rating of the book
-     *@param genre, the genre of the book
-     *@param pages, the amount of pages the book has
-     *@param isbn, the thirteen digit code of the book 
+     * Constructor a book: sets publishDate, author, SIN, language, publisher, ageRating, and genre from parameters
+     * @param publishDate, the publish date of the book
+     * @param author, the book's author's name
+     * @param SIN, the unique identity of the book
+     * @param language, the language the book is in
+     * @param publisher, the book's publisher's name 
+     * @param ageRating, the age rating of the book
+     * @param genre, the genre of the book
+     * @param pages, the amount of pages the book has
+     * @param isbn, the thirteen digit code of the book 
      */
     public Book(String name, LocalDate publishDate, String author, int SIN, String language,
             String publisher, Character ageRating, String genre, int pages, int isbn, int checkOutNumber, int totalNumber, String imagePath, String description) {
@@ -58,17 +69,17 @@ public class Book extends Media {
     }
     
     /**
-     *Constructor a book: sets publishDate, author, SIN, language, publisher, ageRating, and genre from parameters
-     *@param publishDate, the publish date of the book
-     *@param author, the book's author's name
-     *@param SIN, the unique identity of the book
-     *@param language, the language the book is in
-     *@param publisher, the book's publisher's name 
-     *@param ageRating, the age rating of the book
-     *@param genre, the genre of the book
-     *@param pages, the amount of pages the book has
-     *@param isHardcover, whether the book is a hardcover book
-     *@param isbn, the thirteen digit code of the book
+     * Constructor a book: sets publishDate, author, SIN, language, publisher, ageRating, and genre from parameters
+     * @param publishDate, the publish date of the book
+     * @param author, the book's author's name
+     * @param SIN, the unique identity of the book
+     * @param language, the language the book is in
+     * @param publisher, the book's publisher's name 
+     * @param ageRating, the age rating of the book
+     * @param genre, the genre of the book
+     * @param pages, the amount of pages the book has
+     * @param isHardcover, whether the book is a hardcover book
+     * @param isbn, the thirteen digit code of the book
      */
     public Book(String name, LocalDate publishDate, String author, int SIN, String language,
             String publisher, Character ageRating, String genre, int pages,
@@ -81,7 +92,7 @@ public class Book extends Media {
     }
     
     /**
-     *Description: Gets json object represent of this class object
+     * Description: Gets json object represent of this class object
      * 
      *@return jsonobject
      */
@@ -111,55 +122,55 @@ public class Book extends Media {
     }
     
     /**
-     *Description: gets the book's number of pages 
-     *@return int pages of the book
+     * Description: gets the book's number of pages 
+     * @return int pages of the book
      */
     public int getPages() {
         return this.pages;
     }
     
     /**
-     *Description: gets whether or not the book is hardcover
-     *@return boolean isHardcover of the book
+     * Description: gets whether or not the book is hardcover
+     * @return boolean isHardcover of the book
      */
     public boolean getIsHardcover() {
         return this.isHardcover;
     }
     
     /**
-     *Description: gets isbn of the book
-     *@return int isbn of the book
+     * Description: gets isbn of the book
+     * @return int isbn of the book
      */
     public int getIsbn() {
         return this.isbn;
     }
     
     /**
-     *Description: sets the book's amount of pages
-     *@param pages, the new amount of pages the book has 
+     * Description: sets the book's amount of pages
+     * @param pages, the new amount of pages the book has 
      */
     public void setPages(int pages) {
         this.pages = pages;
     }
     
     /**
-     *Description: sets whether or not the book is Hardcover
-     *@param isHardcover, the new isHardcover of the book
+     * Description: sets whether or not the book is Hardcover
+     * @param isHardcover, the new isHardcover of the book
      */
     public void setIsHardcover(boolean isHardcover) {
         this.isHardcover = isHardcover;
     }
     
     /**
-     *Description: sets the isbn of the book
-     *@param isbn, the new isbn of the book
+     * Description: sets the isbn of the book
+     * @param isbn, the new isbn of the book
      */
     public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
 
     /**
-     *Description: prints all the attributes of the book
+     * Description: prints all the attributes of the book
      */
     public String toString() {
         return "{" +
